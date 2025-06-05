@@ -9,9 +9,9 @@
     stages {
         stage('Download Playbook') {
             steps {
-                echo "Downloading index-azure.html file directly to ${PLAYBOOK_FILE}..."
+                echo "Downloading playbook2.yaml file directly to ${PLAYBOOK_FILE}..."
                 sh """
-                    curl -sSL -H "Cache-Control: no-cache" -o ${PLAYBOOK_FILE} https://github.com/Ashwani3636/capstone/blob/d1ceaed1521f5c683ce07911fbb5df4225fad4fa/index-azure.html
+                    curl -sSL -H "Cache-Control: no-cache" -o ${PLAYBOOK_FILE} https://github.com/Ashwani3636/capstone/blob/369fd59dcd1b91e822b8bdf2ac3765bf0233d0f9/playbook2.yaml
                     curl -s https://api.github.com/repos/Ashwani3636/capstone/commits/main | grep sha
                 """
             }
